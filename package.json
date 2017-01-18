@@ -30,6 +30,9 @@
     "material-ui": "0.15.4",
     "react": "15.3.1",
     "react-dom": "15.3.1",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0",
     "react-router": "2.6.1",
     "react-tap-event-plugin": "1.0.0",
     "recharts": "0.13.3"
@@ -72,6 +75,7 @@
     "prompt": "1.0.0",
     "react-addons-test-utils": "15.3.0",
     "redux-immutable-state-invariant": "1.2.3",
+    "redux-logger": "^2.7.4",
     "replace": "0.3.0",
     "rimraf": "2.5.4",
     "sass-loader": "4.0.0",
@@ -94,6 +98,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/rafaelhz/react-material-admin-template"
+    "url": "https://github.com/verten/react-material-admin-template"
   }
 }
