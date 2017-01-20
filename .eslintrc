@@ -4,6 +4,7 @@
     "plugin:import/errors",
     "plugin:import/warnings"
   ],
+  "parser": "babel-eslint",
   "plugins": [
     "react"
   ],
@@ -27,13 +28,14 @@
     "no-console": 1,
     "no-debugger": 1,
     "no-var": 1,
-    "semi": [1, "always"],
+    "semi": 0,
     "no-trailing-spaces": 0,
     "eol-last": 0,
     "no-underscore-dangle": 0,
     "no-alert": 0,
     "no-lone-blocks": 0,
     "jsx-quotes": 1,
+    "import/default": 1,
     "react/display-name": [ 1, {"ignoreTranspilerName": false }],
     "react/forbid-prop-types": [1, {"forbid": ["any"]}],
     "react/jsx-boolean-value": 0,

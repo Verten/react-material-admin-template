@@ -27,7 +27,7 @@ const PageBase = (props) => {
 PageBase.propTypes = {
   title: PropTypes.string,
   navigation: PropTypes.string,
-  children: PropTypes.element
+  children: PropTypes.object
 };
 
 export default PageBase;
