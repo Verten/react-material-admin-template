@@ -58,7 +58,7 @@ export function fetchUser() {
 export function fetchUserDetail(id) {
   const url = API[FETCH_USER](id)
   const config = null
-  return (dispatch, getState) => {
+  return (dispatch) => {
     return dispatch(Utilities.callAPI(url, config, userRequest(), _fetchUserDetail(), _error()))
   }
 }

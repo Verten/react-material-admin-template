@@ -87,7 +87,6 @@ describe('<UserDetailPage/>', () => {
         }
       }
     )
-    console.info(enzymeWrapper.find('UserDetailPage').props())
     expect(enzymeWrapper.find('UserDetailPage').prop('user')).to.be.null
     expect(enzymeWrapper.find('UserDetailPage').prop('isProcessing')).to.be.false
     expect(enzymeWrapper.find('UserDetailPage').prop('error')).to.be.null

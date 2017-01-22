@@ -1,5 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
+import { spy } from 'sinon'
 import { expect } from 'chai'
 import { UserDetail } from './UserDetail'
 
@@ -37,5 +38,15 @@ describe('<UserDetail/>', () => {
     const actual = enzymeWrapper.find('form').children()
     expect(actual).to.have.length(1)
     expect(actual.prop('status')).to.equal('loading')
+  })
+
+  it('should redirect to "/" when clicking BACK Button', () => {
+    const preProps = {
+      data: { name: 'test' },
+    }
+    const { props, enzymeWrapper } = setup(preProps)
+    const backLink = enzymeWrapper.find('Link')
+    expect(backLink).to.have.length(1)
+    expect(backLink.prop('to')).to.equal('/users')
   })
 })
