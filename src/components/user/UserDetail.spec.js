@@ -1,6 +1,5 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { spy } from 'sinon'
 import { expect } from 'chai'
 import { UserDetail } from './UserDetail'
 
@@ -40,10 +39,11 @@ describe('<UserDetail/>', () => {
     expect(actual.prop('status')).to.equal('loading')
   })
 
-  it('should redirect to "/" when clicking BACK Button', () => {
+  it('Link to should equal "/user" ', () => {
     const preProps = {
       data: { name: 'test' },
     }
+    /* eslint-disable no-unused-vars */
     const { props, enzymeWrapper } = setup(preProps)
     const backLink = enzymeWrapper.find('Link')
     expect(backLink).to.have.length(1)
