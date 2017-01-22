@@ -8,7 +8,7 @@ import Actions from '../../actions'
 import PageBase from '../../components/PageBase'
 import UserDetail from '../../components/user/UserDetail'
 
-class UserDetailPage extends React.Component {
+export class UserDetailPage extends React.Component {
   static propTypes = {
     params: React.PropTypes.object,
     actions: React.PropTypes.object,

@@ -8,7 +8,7 @@ import PageBase from '../../components/PageBase'
 import UserList from '../../components/user/UserList'
 import Actions from '../../actions'
 
-class UserListPage extends React.Component {
+export class UserListPage extends React.Component {
   static propTypes = {
     users: React.PropTypes.array,
     actions: React.PropTypes.object,
