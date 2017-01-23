@@ -57,6 +57,33 @@ describe('user actions', () => {
     expect(store.dispatch(actions.fetchUser())).to.be.undefined
   })
 
+  it('should fetch user when didInvalidate is true', () => {
+    const url = API[FETCH_USER]()
+    nock(url).get('').reply(200, [{ id: 1 }, { id: 2 }])
+    const expectedActions = [
+      {
+        type: USER_REQUEST,
+      },
+      {
+        type: FETCH_USER,
+        users: [{ id: 1 }, { id: 2 }],
+      },
+    ]
+    const store = mockStore({
+      userReducer: Immutable.fromJS({
+        user: null,
+        users: [{ id: 1 }, { id: 2 }, { id: 3 }],
+        didInvalidDate: true,
+        isProcessing: false,
+        error: null,
+      })
+    })
+    return store.dispatch(actions.fetchUser()).then(() => {
+      const actualAction = store.getActions()
+      expect(actualAction).to.deep.equal(expectedActions)
+    })
+  })
+
   it('fetchUserDetail should create FETCH_USER_DETAIL action when fetching user by ID has been done', () => {
     const url = API[FETCH_USER](2) // id -> 2
     nock(url).get('').reply(200, { name: 'test' })

@@ -35,14 +35,14 @@ function _fetchUserDetail() {
 }
 
 function shouldFetchUser(state) {
-  const { users, isProcessing, didInvalidate } = state.userReducer.toJS()
+  const { users, isProcessing, didInvalidDate } = state.userReducer.toJS()
   if (!users || users.length === 0) {
     return true
   }
   if (isProcessing) {
     return false
   }
-  return didInvalidate
+  return didInvalidDate
 }
 
 export function fetchUser() {
