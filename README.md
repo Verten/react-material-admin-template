@@ -1,4 +1,4 @@
-React Ui-Material Admin Template
+React Ui-Material Admin Template [![Build Status](https://travis-ci.org/Verten/react-material-admin-template.svg?branch=master)](https://travis-ci.org/Verten/react-material-admin-template)
 ================================
 
 This is a simple responsive admin template using [React](https://facebook.github.io/react/) and [Material-UI](http://www.material-ui.com/) components.
