@@ -2,9 +2,6 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import { expect } from 'chai'
 import { UserList } from './UserList'
-import injectTapEventPlugin from 'react-tap-event-plugin'
-
-injectTapEventPlugin()
 
 function setup(propOverrides) {
   const props = Object.assign({

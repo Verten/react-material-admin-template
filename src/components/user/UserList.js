@@ -77,10 +77,6 @@ export class UserList extends React.Component {
 
   }
 
-  componentWillReceiveProps(nextProps) {
-    console.info(nextProps)
-  }
-
   render() {
     const users = this.props.data
     const { isProcessing } = this.props

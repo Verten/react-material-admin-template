@@ -35,13 +35,26 @@ describe('user actions', () => {
         users: [{ id: 1 }, { id: 2 }],
       },
     ]
-    const store = mockStore({
+    let store = mockStore({
       userReducer
     })
-    return store.dispatch(actions.fetchUser()).then(() => {
+    store.dispatch(actions.fetchUser()).then(() => {
       const actualAction = store.getActions()
       expect(actualAction).to.deep.equal(expectedActions)
     })
+  })
+
+  it('should NOT fetch user when request is Processing', () => {
+    const store = mockStore({
+      userReducer: Immutable.fromJS({
+        user: null,
+        users: [{ id: 1 }, { id: 2 }],
+        didInvalidDate: false,
+        isProcessing: true,
+        error: null,
+      })
+    })
+    expect(store.dispatch(actions.fetchUser())).to.be.undefined
   })
 
   it('fetchUserDetail should create FETCH_USER_DETAIL action when fetching user by ID has been done', () => {
